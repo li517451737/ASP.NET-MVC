@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileUpload", "FileUpload\FileUpload.csproj", "{846A7F6E-7FE3-4FBA-BD25-29453390BA9E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TP.EntityFrameworkCore", "TP.EntityFrameworkCore", "{7DD4997A-D22C-4889-A6CA-E6D056491BB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP.EntityFrameworkCore", "TP.EntityFrameworkCore\TP.EntityFrameworkCore.csproj", "{8673091E-A259-44EF-8362-95D6489E4C4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TP.Web", "TP.Web", "{92755641-601E-4B3F-9D89-CBE276AF8CEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +21,17 @@ Global
 		{846A7F6E-7FE3-4FBA-BD25-29453390BA9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{846A7F6E-7FE3-4FBA-BD25-29453390BA9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{846A7F6E-7FE3-4FBA-BD25-29453390BA9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8673091E-A259-44EF-8362-95D6489E4C4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8673091E-A259-44EF-8362-95D6489E4C4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8673091E-A259-44EF-8362-95D6489E4C4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8673091E-A259-44EF-8362-95D6489E4C4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{846A7F6E-7FE3-4FBA-BD25-29453390BA9E} = {92755641-601E-4B3F-9D89-CBE276AF8CEA}
+		{8673091E-A259-44EF-8362-95D6489E4C4A} = {7DD4997A-D22C-4889-A6CA-E6D056491BB3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0399726F-9DEE-4E69-8872-914FEB09D54F}

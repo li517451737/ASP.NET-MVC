@@ -23,12 +23,21 @@ namespace FileUpload.Controllers
                 if (System.IO.File.Exists(fileName))
                     System.IO.File.Delete(fileName);
                 uploadedFile.SaveAs(fileName);
+                return Json(new
+                {
+                    success = true,
+                    message = "上传成功"
+                }, JsonRequestBehavior.AllowGet);
             }
-            return Json(new
+            else
             {
-                success = true,
-                message = "上传成功"
-            }, JsonRequestBehavior.AllowGet);
+                return Json(new
+                {
+                    success = false,
+                    message = "无效的文件"
+                }, JsonRequestBehavior.AllowGet);
+            }
+           
         }
     }
 }
