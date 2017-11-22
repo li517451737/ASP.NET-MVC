@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Mvc;
+using TP.Mvc.Web.Filters;
 
 namespace TP.Mvc.Web
 {
@@ -7,7 +8,9 @@ namespace TP.Mvc.Web
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+            //filters.Add(new HandleErrorAttribute());
+            filters.Add(new ExceptionFilter());
+
         }
     }
 }
