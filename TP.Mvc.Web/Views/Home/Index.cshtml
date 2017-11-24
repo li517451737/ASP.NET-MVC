@@ -31,6 +31,12 @@
             <div id="FileSize" class="info"></div>
         </div>
     </div>
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">选择用户</label>
+            <select class="form-control" id="testSelection" data-bind="options:Persons,optionsText:'Name',optionsValue:'Id',value:SelectionPerson,event:{change:$root.PersonSelectionChange}"></select>
+        </div>
+    </div>
 </div>
 
 @section scripts{
@@ -38,6 +44,7 @@
         var _$fileInput;
         //var selectedFile;
         $(function () {
+            ko.applyBindings(new viewModel());
             _$fileInput = $("#UploadedFile");
             $(".fileinput-button").click(function () {
                 _$fileInput.click();
@@ -128,6 +135,26 @@
         }
         function errorHandler(e) {
             console.log(e);
+        }
+
+        var viewModel = function () {
+            var self = this;
+            this.Persons = ko.observableArray();
+            this.SelectionPerson = ko.observable();
+            this.Load = function () {
+                $.getJSON("@Url.Action("GetPersons")", "", function (data) {
+                    self.Persons(data);
+                })
+            }
+
+            this.PersonSelectionChange = function () {
+                var persons = self.Persons();
+               var selectionPerson = $.grep(persons, function (e) {
+                    return e.Id === self.SelectionPerson();
+                })[0];
+               console.log(selectionPerson.Age);
+            }
+            self.Load();
         }
 
     </script>

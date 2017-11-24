@@ -27,5 +27,30 @@ namespace TP.Mvc.Web.Controllers
 
             return View();
         }
+       
+        public ActionResult GetPersons()
+        {
+            List<dynamic> list = new List<dynamic>();
+            list.Add(new
+            {
+                Id=1,
+                Name="哇哈哈",
+                Age=12
+            });
+            list.Add(new
+            {
+                Id = 1,
+                Name = "李四",
+                Age = 32
+            });
+            list.Add(new
+            {
+                Id = 1,
+                Name = "王二",
+                Age = 22
+            });
+
+            return Json(list, JsonRequestBehavior.AllowGet);
+        }
     }
 }
