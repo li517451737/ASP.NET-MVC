@@ -1,0 +1,10 @@
+﻿@*自定义Template,可通过Html.EditorFor()调用*@
+@model DateTime?
+@{ 
+    string value = string.Empty;
+    if (Model.HasValue)
+    {
+        value = Model.Value.ToString("yyyy-MM-dd");
+    }
+}
+@Html.TextBox("", value, new { type = "date",@class="form-control" })

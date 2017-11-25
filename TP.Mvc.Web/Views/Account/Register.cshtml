@@ -1,0 +1,38 @@
+﻿@model TP.Mvc.Web.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+}
+<div class="row">
+    <form class="form-horizontal" role="form" id="registerForm">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">用户名</label>
+            <div class="col-sm-3">
+                @Html.EditorFor(model => model.UserName, new { htmlAttributes= new { @class = "form-control" } })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">密码</label>
+            <div class="col-sm-3">
+                @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">确认密码</label>
+            <div class="col-sm-3">
+                @Html.PasswordFor(model => model.ConfirmPassword, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">生日</label>
+            <div class="col-sm-3">
+                @Html.EditorFor(model=>model.Birthday)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-3">
+                <button type="submit" class="btn btn-primary">登录</button>
+                <button type="reset" class="btn btn-warning">重置</button>
+            </div>
+        </div>
+    </form>
+</div>

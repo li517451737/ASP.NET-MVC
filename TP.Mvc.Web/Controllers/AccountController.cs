@@ -12,6 +12,13 @@ namespace TP.Mvc.Web.Controllers
         // GET: Account
         public ActionResult Index()
         {
+            var i = 0;
+            ViewBag.Count = 1 / i;
+            return View();
+        }
+
+        public ActionResult Register()
+        {
             return View();
         }
 
@@ -21,7 +28,7 @@ namespace TP.Mvc.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(LoginViewModel model)
+        public ActionResult Login(RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {

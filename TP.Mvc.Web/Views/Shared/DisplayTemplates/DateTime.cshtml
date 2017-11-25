@@ -1,0 +1,22 @@
+﻿@model DateTime?
+@{ 
+    string value = string.Empty;
+    string decorate = null;
+    if (Model.HasValue)
+    {
+        value = Model.Value.ToString("yyyy-MM-dd");
+        if (Model.Value.Date < DateTime.Now.Date)
+        {
+            decorate = "date-overdue";
+        }
+        else if (Model.Value.Date<=DateTime.Now.AddDays(7))
+        {
+            decorate = "date-near";
+        }
+    }
+    else
+    {
+        decorate = "date-one";
+    }
+}
+<span class="date @decorate">@value</span>
