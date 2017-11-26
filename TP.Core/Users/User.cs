@@ -15,5 +15,10 @@ namespace TP.Core.Users
         public string Mobile { get; set; }
 
         public DateTime Created { get; set; }
+
+        /// <summary>
+        /// 用户唯一码
+        /// </summary>
+        public Guid Guid { get; set; }
     }
 }

@@ -34,7 +34,7 @@ namespace TP.Mvc.Web
             {
                 e.Dismiss();
             }
-            if (exception is System.IO.FileNotFoundException || exception is HttpRequestValidationException || exception is httpException)
+            if (exception is System.IO.FileNotFoundException || exception is HttpRequestValidationException || exception is HttpException)
             {
                 e.Dismiss();
             }

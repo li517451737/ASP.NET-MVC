@@ -16,8 +16,6 @@ namespace TP.Mvc.Web.Controllers
 
         public ActionResult About()
         {
-            throw new Exception("出错啦");
-
             ViewBag.Message = "Your application description page.";
             return View();
         }
