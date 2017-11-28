@@ -7,13 +7,13 @@ namespace TP.EntityFrameworkCore.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class addUsers : IMigrationMetadata
+    public sealed partial class InitDatabase : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addUsers));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitDatabase));
         
         string IMigrationMetadata.Id
         {
-            get { return "201711181014339_addUsers"; }
+            get { return "201711280455415_InitDatabase"; }
         }
         
         string IMigrationMetadata.Source
