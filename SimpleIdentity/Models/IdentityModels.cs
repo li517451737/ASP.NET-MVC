@@ -32,6 +32,12 @@ namespace IdentitySample.Models
             Database.SetInitializer<ApplicationDbContext>(new ApplicationDbInitializer());
         }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            //modelBuilder.ForSqlServerUseSequenceHiLo("DBSequenceHiLo");
+            base.OnModelCreating(modelBuilder);
+        }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

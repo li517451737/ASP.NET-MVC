@@ -34,8 +34,11 @@ namespace TP.Mvc.Web.Controllers
             {
                 return RedirectToRoute("Default");
             }
-
+            model.Required(i => i.UserName, "用户名为空");
             return View(model);
         }
+
+
+       
     }
 }

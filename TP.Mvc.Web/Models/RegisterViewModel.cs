@@ -10,7 +10,7 @@ namespace TP.Mvc.Web.Models
 {
     public class RegisterViewModel
     {
-        [Required(ErrorMessageResourceType =typeof(ModelResource),ErrorMessageResourceName ="UserName")]
+        [Required(ErrorMessageResourceType = typeof(ModelResource), ErrorMessageResourceName = "UserName")]
         public string UserName { get; set; }
 
         public string Password { get; set; }
@@ -20,6 +20,12 @@ namespace TP.Mvc.Web.Models
 
         public DateTime? Birthday { get; set; }
 
-
+        public void Required(Func<RegisterViewModel, string> func, string message)
+        {
+            if (string.IsNullOrEmpty(func(this)))   
+            {
+                throw new Exception(message);
+            }
+        }
     }
 }
