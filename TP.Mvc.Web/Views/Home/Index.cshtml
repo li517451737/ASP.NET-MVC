@@ -17,7 +17,7 @@
             </span>
             <button class="btn btn-primary start" type="button" id="submitBtn"><i class="glyphicon glyphicon-upload"></i> 开始上传</button>
             <button class="btn btn-warning start" type="button" id="CancelBtn"><i class="glyphicon glyphicon-ban-circle"></i> 取消上传</button>
-            <input type="file" name="UploadedFile" id="UploadedFile"  style="display:none" />
+            <input type="file" name="UploadedFile" id="UploadedFile" style="display:none" />
         </form>
         <div class="progress CustomProgress">
             <div id="FileProgress" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;">
@@ -37,15 +37,27 @@
             <select class="form-control" id="testSelection" data-bind="options:Persons,optionsText:'Name',optionsValue:'Id',value:SelectionPerson,event:{change:$root.PersonSelectionChange}"></select>
         </div>
     </div>
-
-
-    <ul class="tag-list">
-        <li class="tag text-warning">ABC<span class="close" style="font-size:18px;"><i class="glyphicon glyphicon-eye-close"></i></span></li>
-        <li class="tag text-warning"><span class="close" style="font-size:18px;"><i class="glyphicon glyphicon-eye-close"></i></span></li>
-    </ul>
 </div>
+<div class="row">
+    <div class="gallery col-md-12">
+        <div class="col-md-3">
+            <a href="~/Plugins/jquery-zoom/img/gallery/croatia-660x441.jpg"><img src="~/Plugins/jquery-zoom/img/gallery/croatia-69x69.jpg" /></a>
+        </div>
+        <div class="col-md-2"><a href="~/Plugins/jquery-zoom/img/gallery/DSC_0014-660x441.jpg"><img src="~/Plugins/jquery-zoom/img/gallery/DSC_0014-69x69.jpg" /></a></div>
+        <div class="col-md-2"><a href="~/Plugins/jquery-zoom/img/gallery/DSC_0061-660x441.jpg"><img src="~/Plugins/jquery-zoom/img/gallery/DSC_0061-69x69.jpg" /></a></div>
+        <div class="col-md-2"><a href="~/Plugins/jquery-zoom/img/gallery/DSC_0019-660x441.jpg"><img src="~/Plugins/jquery-zoom/img/gallery/DSC_0019-69x69.jpg" /></a></div>
+    </div>
+</div>
+<div class="row">
+    <form class="form-horizontal">
 
+    </form>
+</div>
+@section styles{\
+    <link href="~/Plugins/jquery-zoom/css/zoom.css" rel="stylesheet" />
+}
 @section scripts{
+    <script src="~/Plugins/jquery-zoom/js/zoom.js"></script>
     <script>
         var _$fileInput;
         //var selectedFile;

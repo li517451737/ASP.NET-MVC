@@ -253,7 +253,6 @@
     <Content Include="Plugins\jquery-zoom\img\icons\close.png" />
     <Content Include="Plugins\jquery-zoom\img\loading.gif" />
     <Content Include="Plugins\jquery-zoom\img\spinner.gif" />
-    <Content Include="Plugins\jquery-zoom\js\jquery-2.0.3.min.js" />
     <Content Include="Plugins\jquery-zoom\js\zoom.js" />
     <Content Include="Plugins\jquery-zoom\js\zoom.min.js" />
     <Content Include="Scripts\bootstrap.js" />

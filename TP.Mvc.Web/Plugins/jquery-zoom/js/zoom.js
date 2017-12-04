@@ -30,7 +30,7 @@
 		}
 		zoomContent.html(image).delay(500).addClass('loading');
 		zoomContent.prepend(overlay);
-		image.load(render).attr('src', src);
+        image.on("load", render).attr('src', src);
 		openedImage = link;
 		
 		function render() {
