@@ -1,4 +1,4 @@
-﻿@{
+﻿@{ 
     ViewBag.Title = "Home Page";
 }
 
@@ -44,7 +44,19 @@
         <li class="tag text-warning"><span class="close" style="font-size:18px;"><i class="glyphicon glyphicon-eye-close"></i></span></li>
     </ul>
 </div>
-
+<div class="row">
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-3 control-label">选择相册</label>
+            <div class="col-sm-2">
+                <select class="form-control">
+                    <option>默认</option>
+                    <option>人物</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
 @section scripts{
     <script>
         var _$fileInput;
